@@ -6,9 +6,9 @@
 #
 
 if node['platform_family'] == "rhel"
-	package ='httpd'
+	package ="'httpd"
 elsif node['platform_family'] == "debian"
-	package = 'apache2'
+	package ="apache2"
 end
 
 package 'apache2' do
@@ -21,5 +21,3 @@ service 'apache2' do
 	action [:start, :enable]
 end
 
-# include_recipe 'apache::websites'
- 
